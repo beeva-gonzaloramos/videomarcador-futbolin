@@ -1,6 +1,7 @@
 class Marcador:
     teamios = ["", 0]
     teamandroid = ["", 0]
+    actualizado = False
 
     def __init__(self, team1, team2):
         self.teamios[0] = team1
@@ -18,6 +19,14 @@ class Marcador:
         elif self.teamandroid[1] == 7:
             winner = "teamandroid"
 
+        self.actualizado = True
+
         return winner
 
+    def estaActualizado(self):
+        if self.actualizado:
+            self.actualizado = False
+            return True
+        else:
+            return False
 
