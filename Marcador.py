@@ -19,14 +19,15 @@ class Marcador:
         elif self.teamandroid[1] == 7:
             winner = "teamandroid"
 
-        self.actualizado = True
+        self.actualizado = team
 
         return winner
 
     def estaActualizado(self):
         if self.actualizado:
+            sal = self.actualizado
             self.actualizado = False
-            return True
+            return sal
         else:
             return False
 
